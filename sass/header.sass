@@ -1,0 +1,301 @@
+@import "bourbon"
+@import "_var.sass"
+
+
+/* DELETE */
+a:active
+  outline: 1px dotted $main-color
+
+
+
+body
+  font-size: 16px
+  color: #333
+  min-width: 320px
+  position: relative
+  line-height: em(22px)
+  font-family: RalewayRegular, sans-serif
+  overflow-x: hidden
+
+.hidden
+  display: none
+
+a, a:hover, a:focus, a:active
+  color: $main-color
+  text-decoration: underline
+
+.headers
+  font-family: PFCentroSlabProMedium, $helvetica
+  text-transform: uppercase
+  font-weight: normal
+  color: $headers-color
+  line-height: em(22px)
+
+h1, h2, h3, h4, h5, h6
+  @extend .headers
+
+h1
+  font-size: em(48px)
+
+h2
+  font-size: em(30px)
+
+h3
+  font-size: em(24px)
+
+b, strong
+  font-family: RalewayBold, $helvetica
+  font-weight: normal
+
+.button-wrap
+  text-align: center
+
+.buttons
+  display: inline-block
+  text-decoration: none
+  border: none
+  background-color: $main-color
+  color: #111
+  font-family: PFCentroSlabProBold, $helvetica
+  font-size: em(22px)
+  padding: 12px 30px
+  border-bottom: 3px solid #b97200
+  transition: all .2s ease
+  &:hover
+    background-color: #ffb338
+    text-decoration: none
+    color: #111
+  &:active
+    background-color: #db8c0e
+    text-decoration: none
+    color: #111
+  &:focus
+    text-decoration: none
+    color: #111
+  
+
+.before
+  content: ''
+  width: 100%
+  height: 100%
+  position: absolute
+  left: 0
+  top: 0
+
+.ul-menu
+  list-style-type: none
+  margin: 0
+  padding: 0
+  li
+    display: inline-block
+
+.main-head
+  position: relative
+  min-height: 620px
+  background-size: cover
+  background-position: center center
+  padding-bottom: 120px
+  &:before
+    @extend .before
+    background-color: #394b5f
+    opacity: .85
+  h1
+    text-transform: none
+
+.top-line
+  padding-top: 45px
+  min-height: 160px
+  background-image: url(img/top_gradient.png)
+  background-repeat: repeat-x
+
+.logo
+  img
+    width: 100px
+    opacity: .95
+
+.main-menu
+  font-size: em(14px)
+  ul
+    @extend .ul-menu
+  li
+    padding: 0 10px
+    &.active
+      a
+        color: $main-color
+        text-decoration: underline
+  a
+    line-height: 48px
+    display: block
+    text-decoration: none
+    color: #fff
+    &:hover, &:active
+      color: $main-color
+      text-decoration: underline
+
+.phone-wrap
+  position: relative
+  .phone
+    opacity: .9
+    color: #fff
+    font-family: RobotoBold, $helvetica
+    font-size: em(18px)
+    line-height: 46px
+    text-align: right
+    white-space: nowrap
+  .toggle-menu
+    display: block
+    float: right
+    position: absolute
+    right: 0
+    top: 0
+    text-align: center
+    line-height: 48px
+
+
+.toggle-menu
+  display: block
+  width: 28px
+  height: 38px
+  margin: 22px auto 0
+
+
+.toggle-menu span:after,
+.toggle-menu span:before
+  content: ""
+  position: absolute
+  left: 0
+  top: -9px
+
+.toggle-menu span:after
+  top: 9px
+
+.toggle-menu span
+  position: relative
+  display: block
+
+
+.toggle-menu span,
+.toggle-menu span:after,
+.toggle-menu span:before
+  width: 100%
+  height: 2px
+  background-color: #fff
+  transition: all .2s
+  backface-visibility: hidden
+  border-radius: 2px
+
+
+/* on activation */
+.toggle-menu.on span
+  background-color: transparent
+
+.toggle-menu.on span:before
+  transform: rotate(45deg) translate(5px, 5px)
+
+.toggle-menu.on span:after
+  transform: rotate(-45deg) translate(7px, -8px)
+
+.toggle-menu.on + #menu
+  opacity: 1
+
+
+.header-wrap
+  margin-top: 40px
+  h1
+    margin-top: 120px
+    color: #fff
+    display: inline-block
+    border-bottom: 8px solid $main-color
+    padding-bottom: 10px
+    line-height: 1
+  ul
+    margin-top: 10px
+    @extend .ul-menu
+    li
+      display: block
+      font-family: RalewaySemiBold, $helvetica
+      font-size: em(18px)
+      margin-bottom: 12px
+      position: relative
+      padding-left: 18px
+      &:before
+        content: ''
+        display: block
+        width: 6px
+        height: 11px
+        @include triangle(12px, $main-color, right)
+        position: absolute
+        top: 4px
+        left: 0
+    a
+      text-decoration: none
+      color: #fff
+      &:hover, &:active
+        text-decoration: underline
+        color: $main-color
+
+.header-left
+  margin-bottom: 40px
+
+.forms
+  background-color: transparentize(#243343, .2)
+  padding: 35px 35px 30px
+  color: #97a4b2
+  font-size: em(14px)
+  border-bottom: 3px solid #1a222b
+  h4
+    color: #fff
+    font-size: em(33px)
+    font-family: PFCentroSlabProMedium, $helvetica
+    text-transform: none
+    margin: 0
+    p
+      line-height: em(23px)
+      margin: 15px
+
+  label
+    display: block
+    margin-top: 22px
+    margin-bottom: 20px
+    span
+      letter-spacing: 1.5px
+      display: block
+      margin-bottom: 5px
+      color: #778390
+  input
+    display: block
+    width: 100%
+    border: none
+    // border-top: 3px solid #1f2a36
+    box-shadow: 0 -4px #1f2a36
+    background-color: #34465a
+    text-indent: 10px
+    padding: 10px 0
+    transition: all .3s ease
+    color: #fff
+    font-family: PFCentroSlabProMedium, $helvetica
+    font-size: em(20px)
+    &:focus
+      box-shadow: 0 -5px $main-color
+      background-color: #394e69
+    .buttons
+      margin-top: 20px
+
+.arrow-wrap
+  @extend .button-wrap
+  z-index: 2
+  top: 50px
+  position: relative
+  .arrow-down
+    display: inline-block
+    width: 40px
+    height: 40px
+    background-image: url(img/arrow_down.png)
+    cursor: pointer
+    opacity: .7
+    transition: all .25s ease
+    &:hover
+      opacity: 1
+
+
+

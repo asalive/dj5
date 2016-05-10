@@ -1,0 +1,151 @@
+@import "bourbon"
+@import "_var.sass"
+
+$main-color: #f39f18
+
+*::-webkit-input-placeholder
+  color: #fff
+  opacity: 1
+
+*:-moz-placeholder
+  color: #fff
+  opacity: 1
+
+*::-moz-placeholder
+  color: #fff
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #fff
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #fff
+body input:required:valid,
+body textarea:required:valid
+  color: #fff
+
+
+.homesect
+  padding-top: 80px
+  background-color: #f9f9f9
+  position: relative
+  &:before
+    content: ''
+    display: inline-block
+    height: 6px
+    width: 100% 
+    position: absolute
+    background-image: url(img/bah_1.png)
+    background-repeat: repeat-x
+    top: -6px
+    z-index: 3
+  a
+    &:hover
+      text-decoration: none
+  h2
+    text-align: center
+    position: relative
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      height: 4px
+      background-color: $main-color
+      width: 165px
+      left: 50%
+      bottom: -25px
+      transform: translate(-50%, 0)
+  .lead
+    text-align: center
+    margin-top: 30px
+    a
+      font-family: RalewayBold, $helvetica
+
+.section-1
+  .lead
+    margin-bottom: 65px
+
+  .section-bottom
+    background-color: #2c3949
+    padding: 50px 0
+    text-align: center
+
+.section-content
+  background-image: url(img/s1_gray_bg.png)
+  background-repeat: no-repeat
+  background-position: bottom
+  position: relative
+  padding-bottom: 67px
+  min-height: 548px
+  .s1-bottom-triangle
+    height: 67px
+    width: 100%
+    position: absolute
+    bottom: 0
+    background-image: url(img/s1_triangle.svg)
+    background-position: top
+    // background-size: contain
+    // background-repeat: no-repeat
+    background-size: 100% 100%
+    text-align: center
+    .triangle-logo
+      width: 164px
+      position: relative
+      margin-top: 30px
+      margin-left: -15px
+      z-index: 2
+    .scales
+      width: 160px
+      position: absolute
+      top: -131px
+      left: 50%
+      transform: translate(-50%, 0)
+
+
+
+.info-item
+  padding-left: 34px
+  max-width: 320px
+  margin: 50px 0
+  line-height: em(20px)
+  h4
+    margin-top: 0 
+    margin-bottom: 10px
+    font-size: em(21px)
+    line-height: em(16px)
+  a
+    text-transform: none
+    text-decoration: underline
+  p
+    font-size: em(15px)
+    border-bottom: 1px solid #dee1e5
+    padding-bottom: 16px
+    margin: 0
+
+
+.info-item-wrap:nth-child(2)
+  .info-item
+    margin-top: 0
+
+.s1-bottom
+  padding: 15px 0 30px
+  background-color: #435466
+  .info-item
+    margin: 0
+    p
+      color: #fff
+      border-bottom: 1px solid #546476
+  .info-item-wrap
+    &:nth-child(2)
+      margin-top: 74px
+
+
+
+
+
+
+
+//ALWAYS END
+@import "_media.sass"

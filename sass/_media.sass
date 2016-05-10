@@ -1,0 +1,150 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  .main-menu
+    display: none
+    margin-top: 15px
+    min-width: 300px
+    float: right
+    text-align: right
+    background-color: #1c242c
+    position: absolute
+    right: 15px
+    top: 40px
+    z-index: 2
+    ul
+      li
+        padding: 0
+        display: block
+        border-bottom: 1px solid #32404f
+        a
+          padding: 0 20px
+          text-transform: uppercase
+          background-color: transparent
+          transition: all .4s ease
+        a:hover, a:active
+          background-color: #273646
+          text-decoration: none
+          font-family: RalewayBold
+      li.active
+        a
+          font-family: RalewayBold
+          background-color: #273646
+          text-decoration: none
+          // a
+            // background-color: #273646
+            // font-family: RalewayBold, $helvetica
+      li:last-child
+        border-bottom: 0
+  .phone-wrap
+    .phone
+      padding-right: 65px
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  .header-wrap
+    margin-top: 0
+    h1
+      margin-top: 0
+
+  .section-content
+    .s1-bottom-triangle
+      background-size: cover
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  
+  /*Disable Animation on Mobile Devices*/
+  .animated
+    /*CSS transitions*/
+    -o-transition-property: none !important
+    -moz-transition-property: none !important
+    -ms-transition-property: none !important
+    -webkit-transition-property: none !important
+    transition-property: none !important
+    /*CSS transforms*/
+    -o-transform: none !important
+    -moz-transform: none !important
+    -ms-transform: none !important
+    -webkit-transform: none !important
+    transform: none !important
+    /*CSS animations*/
+    -webkit-animation: none !important
+    -moz-animation: none !important
+    -o-animation: none !important
+    -ms-animation: none !important
+    animation: none !important
+
+  .info-item
+    max-width: 100%
+    margin-top: 20px
+    border-bottom: 1px solid #d6dae0
+    padding-left: 0
+
+  .section-1 .lead 
+    margin-bottom: 35px
+
+  .s1-bottom
+    .info-item-wrap:nth-child(2)
+      margin-top: 0
+    .info-item
+      margin: 55px 0
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  .phone-wrap
+    .phone
+      font-size: 18px
+      line-height: 34px
+      padding-right: 50px
+    .toggle-menu
+      line-height: 34px
+      margin-top: 15px
+
+  .logo
+    img
+      width: 110px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  /**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  .main-menu
+    display: block !important
+  a
+    outline: none !important
+

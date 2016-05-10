@@ -1,0 +1,1 @@
+{"/home/tanya/Try/WebDesign Master/dj5/_optimized_gulp_sass/gulpfile.js":{"sha1":"1f79938c1bee17f77bc5dd3e05d20c4c543c2329","tasks":{"browser-sync":{"name":"browser-sync","dependencies":""},"styles":{"name":"styles","dependencies":""},"watch":{"name":"watch","dependencies":""},"default":{"name":"default","dependencies":"styles browser-sync watch"}}}}
